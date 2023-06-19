@@ -2,6 +2,7 @@ package com.example.myapplication.presentation.character
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.data.model.ResultResponse
 import com.example.myapplication.databinding.ItemCharactersBinding
@@ -12,7 +13,8 @@ class CharactersAdapter(
     private var list: List<ResultResponse>
 ) : RecyclerView.Adapter<CharactersAdapter.ViewHolder>() {
 
-    private var onItemClickListener: ((Characters) -> Unit)? = null
+    var onItemClickListener: ((Characters) -> Unit)? = null
+    var onItemClick: ((ResultResponse) -> Unit)? = null
 
     inner class ViewHolder(val binding: ItemCharactersBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -38,12 +40,19 @@ class CharactersAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        onBind(holder, list.get(position))
+        val characters = list.get(position)
+        onBind(holder, characters)
+        onItemClick?.invoke(list[position])
+
+        holder.itemView.setOnClickListener {
+            onItemClickListener?.let { listener ->
+                setOnClickListener(listener) }
+        }
     }
 
     override fun getItemCount() = list.size
 
-    fun setOnClickListener(listener: (Characters) -> Unit){
-        onItemClickListener = listener
+    fun setOnClickListener(characters: (Characters) -> Unit){
+        onItemClickListener = characters
     }
 }

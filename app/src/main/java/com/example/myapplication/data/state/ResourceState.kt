@@ -1,11 +1,10 @@
 package com.example.myapplication.data.state
 
-sealed class ResourceState <T>(
-    val data: T? = null,
-    val message: String? = null
-){
-    class Success<T>(data: T?): ResourceState<T>(data)
-    class Error<T>(message: String, data: T? = null): ResourceState<T>(data,message)
-    class Loading<T>: ResourceState<T>()
-    class Empty<T>: ResourceState<T>()
+import com.example.myapplication.domain.model.Characters
+
+sealed class ResourceState {
+    data class Success(val listCharacters: Characters): ResourceState()
+    data class Error(val messageError: String = String()): ResourceState()
+    data class Loading(val isLoading: Boolean): ResourceState()
+    data class Empty(val isEmpty: Empty): ResourceState()
 }

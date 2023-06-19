@@ -10,8 +10,9 @@
         android:name="com.example.myapplication.presentation.character.CharactersFragment"
         android:label="CharacterFragment"
         tools:layout="@layout/fragment_characters">
+
         <action
-            android:id="@+id/action_characterFragment_to_detailsCharacterFragment2"
+            android:id="@+id/action_charactersfragment_to_detailsfragment"
             app:destination="@id/detailsCharacterFragment" />
     </fragment>
 
@@ -19,5 +20,6 @@
         android:id="@+id/detailsCharacterFragment"
         android:name="com.example.myapplication.presentation.details.DetailsCharacterFragment"
         android:label="DetailsCharacterFragment"
-        tools:layout="@layout/fragment_details_character"/>
+        tools:layout="@layout/fragment_details_character">
+    </fragment>
 </navigation>
