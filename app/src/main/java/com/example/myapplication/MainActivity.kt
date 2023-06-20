@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import com.example.myapplication.databinding.ActivityMainBinding
 import androidx.navigation.ui.setupWithNavController
+import com.example.myapplication.presentation.character.CharactersFragment
+import com.example.myapplication.presentation.details.DetailsCharacterFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,13 +23,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews(binding: ActivityMainBinding) {
-        navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         val navController = navHostFragment.navController
 
-        binding.bottomNavigation.apply {
+        binding.bottomNavigation.apply{
             setupWithNavController(navController)
-            setOnNavigationItemReselectedListener { }
+            setOnNavigationItemReselectedListener {  }
 
         }
     }

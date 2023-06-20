@@ -13,7 +13,6 @@ class CharactersAdapter(
     private var list: List<ResultResponse>
 ) : RecyclerView.Adapter<CharactersAdapter.ViewHolder>() {
 
-    var onItemClickListener: ((Characters) -> Unit)? = null
     var onItemClick: ((ResultResponse) -> Unit)? = null
 
     inner class ViewHolder(val binding: ItemCharactersBinding) :
@@ -42,17 +41,11 @@ class CharactersAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val characters = list.get(position)
         onBind(holder, characters)
-        onItemClick?.invoke(list[position])
 
         holder.itemView.setOnClickListener {
-            onItemClickListener?.let { listener ->
-                setOnClickListener(listener) }
+                onItemClick?.invoke(list[position])
         }
     }
 
     override fun getItemCount() = list.size
-
-    fun setOnClickListener(characters: (Characters) -> Unit){
-        onItemClickListener = characters
-    }
 }

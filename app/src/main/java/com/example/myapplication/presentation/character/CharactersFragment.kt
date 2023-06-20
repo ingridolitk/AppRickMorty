@@ -1,14 +1,10 @@
 package com.example.myapplication.presentation.character
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
@@ -31,14 +27,12 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding, CharactersVie
         setupRecycleView()
         collectObserver()
         viewModel.getCharacters()
-       // setNewsListAdapter(values.results)
     }
 
     override fun getViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentCharactersBinding = FragmentCharactersBinding.inflate(inflater, container, false)
-
 
     private fun setupRecycleView() = with(binding) {
         rvCharacters.apply {
@@ -73,23 +67,10 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding, CharactersVie
 
     private fun setNewsListAdapter(result: List<ResultResponse>) = with(binding) {
         val charactersAdapter = CharactersAdapter(result)
+
         charactersAdapter.onItemClick = {
-            toast("teste", Toast.LENGTH_LONG)
-            findNavController().navigate(R.id.action_charactersfragment_to_detailsfragment)
+            findNavController().navigate(CharactersFragmentDirections.actionCharactersfragmentToDetailsfragment())
         }
         rvCharacters.adapter = charactersAdapter
-    }
-
-    companion object{
-        fun navInstance(): CharactersFragment{
-            return CharactersFragment()
-        }
-    }
-
-    interface onBottomClicked{
-        fun buttonClicked(){
-
-        }
-
     }
 }
