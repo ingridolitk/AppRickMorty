@@ -18,7 +18,7 @@ import com.example.myapplication.utils.toast
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class CharactersFragment : BaseFragment<FragmentCharactersBinding, CharactersViewModel>() {
+class CharactersFragment : BaseFragment<FragmentCharactersBinding>() {
 
     private val viewModel: CharactersViewModel by viewModel()
 
@@ -69,7 +69,7 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding, CharactersVie
         val charactersAdapter = CharactersAdapter(result)
 
         charactersAdapter.onItemClick = {
-            findNavController().navigate(CharactersFragmentDirections.actionCharactersfragmentToDetailsfragment())
+            findNavController().navigate(CharactersFragmentDirections.actionCharactersfragmentToDetailsfragment(it))
         }
         rvCharacters.adapter = charactersAdapter
     }

@@ -1,15 +1,13 @@
 package com.example.myapplication.presentation.base
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
+import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import org.koin.core.module.Module
 
-abstract class BaseFragment <VB: ViewBinding, VM: ViewModel> : Fragment() {
+abstract class BaseFragment <VB: ViewBinding> : Fragment() {
 
     private var _binding: VB? = null
     protected val binding get() = _binding!!
