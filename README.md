@@ -26,7 +26,8 @@ A aplicação inicialmente possui somente uma tela e a segunda tela de descriç�
 ![WhatsApp Image 2023-06-16 at 19 53 45](https://github.com/ingridolitk/AppRickMorty/assets/78871436/93950dff-714f-4d07-a428-63de52e03075)
 
 Segunda tela
-![WhatsApp Image 2023-06-21 at 00 14 40](https://github.com/ingridolitk/AppRickMorty/assets/78871436/242792bb-409b-46c1-a593-69a5ef8ca417)
+
+![WhatsApp Image 2023-06-21 at 00 16 44](https://github.com/ingridolitk/AppRickMorty/assets/78871436/f6f8e88a-46ce-47de-b286-f0ab95559dc1)
 
 
 Algumas melhorias precisam ser feitas como:
