@@ -8,7 +8,6 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.myapplication.presentation.character.CharactersFragment
 import com.example.myapplication.presentation.details.DetailsCharacterFragment
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navHostFragment: NavHostFragment
