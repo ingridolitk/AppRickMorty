@@ -29,7 +29,6 @@ O objetivo foi de desenvolver um app com clean arch e mvvm, utilizar navigation 
 
 <b> Primeira tela </b>
 
-A aplicação inicialmente possui somente uma tela e a segunda tela de descrição está em desenvolvimento 
 <img src= "https://github.com/ingridolitk/AppRickMorty/assets/78871436/90a9689c-7816-42aa-be61-e57eb946cabf"  width = "350" height="500"/>
 
 <b> Tela de descrição em desenvolvimento</b>
