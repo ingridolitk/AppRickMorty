@@ -18,7 +18,7 @@ class CharactersAdapter(
     inner class ViewHolder(val binding: ItemCharactersBinding) :
         RecyclerView.ViewHolder(binding.root)
 
-    fun onBind(holder: ViewHolder, result: ResultResponse) {
+    private fun onBind(holder: ViewHolder, result: ResultResponse) {
         holder.binding.apply {
             textviewCharacter.text = result.name
             textviewDescriptionCharacter.text = result.status

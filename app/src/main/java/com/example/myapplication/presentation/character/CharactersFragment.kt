@@ -25,7 +25,7 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecycleView()
-        collectObserver()
+        setupObserver()
         viewModel.getCharacters()
     }
 
@@ -40,7 +40,7 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding>() {
         }
     }
 
-    private fun collectObserver() = lifecycleScope.launch {
+    private fun setupObserver() = lifecycleScope.launch {
         viewModel.descriptionCharacter.observe(viewLifecycleOwner) { resource ->
             when (resource) {
                 is ResourceState.Success -> {
@@ -58,7 +58,6 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding>() {
                 }
                 is ResourceState.Loading -> {
                     binding.progressCircular.show()
-
                 }
                 else -> {}
             }
