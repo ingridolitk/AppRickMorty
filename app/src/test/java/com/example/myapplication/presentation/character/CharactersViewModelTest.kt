@@ -4,7 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.CharactersFactory
 import com.example.CharactersFactory.mockCharacters
 import com.example.myapplication.data.model.*
-import com.example.myapplication.data.state.ResourceState
+import com.example.myapplication.presentation.state.ResourceState
 import com.example.myapplication.domain.model.Characters
 import com.example.myapplication.domain.repository.CharacterRepository
 import com.example.myapplication.domain.usecase.CharactersUseCase
