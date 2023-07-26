@@ -2,11 +2,9 @@ package com.example.myapplication.home.presentation.character
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.data.model.ResultResponse
 import com.example.myapplication.databinding.ItemCharactersBinding
-import com.example.myapplication.domain.model.Characters
+import com.example.myapplication.home.data.model.ResultResponse
 import com.squareup.picasso.Picasso
 
 class CharactersAdapter(

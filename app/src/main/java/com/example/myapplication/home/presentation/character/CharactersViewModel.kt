@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.myapplication.presentation.state.ResourceState
-import com.example.myapplication.domain.usecase.CharactersUseCase
+import com.example.myapplication.home.domain.usecase.CharactersUseCase
+import com.example.myapplication.home.presentation.state.ResourceState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn

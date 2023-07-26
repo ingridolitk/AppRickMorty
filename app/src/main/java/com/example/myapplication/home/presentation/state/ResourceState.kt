@@ -1,6 +1,6 @@
 package com.example.myapplication.home.presentation.state
 
-import com.example.myapplication.domain.model.Characters
+import com.example.myapplication.home.domain.model.Characters
 
 sealed class ResourceState {
     data class Success(val listCharacters: Characters): ResourceState()
