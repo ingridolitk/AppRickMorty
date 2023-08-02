@@ -1,7 +1,7 @@
-package com.example.myapplication.home.module.di
+package com.example.myapplication.home.di.di
 
 import android.app.Application
-import com.example.myapplication.home.module.di.CharactersModule.instance
+import com.example.myapplication.home.di.di.CharactersModule.instance
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.GlobalContext.loadKoinModules
 import org.koin.core.context.startKoin

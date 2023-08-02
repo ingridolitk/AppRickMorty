@@ -1,4 +1,4 @@
-package com.example.myapplication.details.presentation.base
+package com.example.myapplication.utils.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

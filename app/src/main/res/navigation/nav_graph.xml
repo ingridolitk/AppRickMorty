@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/characterFragment"
-        android:name="com.example.myapplication.presentation.character.CharactersFragment"
-        android:label="CharacterFragment"
+        android:name="com.example.myapplication.home.presentation.character.CharactersFragment"
+        android:label="characterFragment"
         tools:layout="@layout/fragment_characters">
 
         <action
@@ -18,11 +18,16 @@
 
     <fragment
         android:id="@+id/detailsCharacterFragment"
-        android:name="com.example.myapplication.presentation.details.DetailsCharacterFragment"
-        android:label="DetailsCharacterFragment"
+        android:name="com.example.myapplication.details.presentation.details.DetailsCharacterFragment"
+        android:label="detailsCharacterFragment"
         tools:layout="@layout/fragment_details_character">
-        <argument
-            android:name="resultResponse"
-            app:argType="com.example.myapplication.data.model.ResultResponse" />
+
+        <action
+            android:id="@+id/action_detailsCharacterFragment_to_characterFragment"
+            app:destination="@id/characterFragment" />
     </fragment>
+        <argument
+            android:name="id"
+            android:defaultValue="1"
+            app:argType="integer" />
 </navigation>
