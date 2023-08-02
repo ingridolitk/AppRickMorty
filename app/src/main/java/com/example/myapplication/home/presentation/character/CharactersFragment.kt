@@ -5,12 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentCharactersBinding
-import com.example.myapplication.details.presentation.base.BaseFragment
 import com.example.myapplication.home.data.model.ResultResponse
+import com.example.myapplication.utils.base.BaseFragment
 import com.example.myapplication.home.presentation.state.ResourceState
 import com.example.myapplication.utils.hide
 import com.example.myapplication.utils.show

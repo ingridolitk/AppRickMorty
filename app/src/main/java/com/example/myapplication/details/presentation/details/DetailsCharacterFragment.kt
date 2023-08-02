@@ -7,15 +7,16 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.myapplication.databinding.FragmentDetailsCharacterBinding
 import com.example.myapplication.home.data.model.ResultResponse
-import com.example.myapplication.home.presentation.base.BaseFragment
+import com.example.myapplication.utils.base.BaseFragment
 import com.squareup.picasso.Picasso
 
 class DetailsCharacterFragment : BaseFragment<FragmentDetailsCharacterBinding>() {
-    //private val args = navArgs<DetailsCharacterFragmentArgs>()
+    //verificar o args
+    private val args = navArgs<Args>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       // bindCharacter(args.value.resultResponse)
+        bindCharacter(args.value.id)
     }
 
     override fun getViewBinding(

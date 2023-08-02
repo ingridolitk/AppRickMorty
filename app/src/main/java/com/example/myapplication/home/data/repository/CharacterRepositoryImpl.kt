@@ -1,10 +1,9 @@
 package com.example.myapplication.home.data.repository
 
-import com.example.myapplication.data.datasource.CharacterDataSource
-import com.example.myapplication.data.mapper.CharactersMapper
-import com.example.myapplication.data.model.CharactersResponse
-import com.example.myapplication.domain.model.Characters
-import com.example.myapplication.domain.repository.CharacterRepository
+import com.example.myapplication.home.data.datasource.CharacterDataSource
+import com.example.myapplication.home.data.mapper.CharactersMapper
+import com.example.myapplication.home.domain.model.Characters
+import com.example.myapplication.home.domain.repository.CharacterRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
