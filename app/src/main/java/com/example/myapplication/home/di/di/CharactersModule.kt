@@ -10,7 +10,7 @@ import org.koin.dsl.module
 
 object CharactersModule {
 
-    val instance = module {
+    val charactersInstance = module {
 
         factory { com.example.myapplication.home.data.api.RetrofitService().createRetrofit() }
         factory { CharactersUseCase(repository = get()) }
