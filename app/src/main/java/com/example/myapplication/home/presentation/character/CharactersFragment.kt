@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentCharactersBinding
 import com.example.myapplication.home.data.model.ResultResponse
-import com.example.myapplication.utils.base.BaseFragment
 import com.example.myapplication.home.presentation.state.ResourceState
+import com.example.myapplication.utils.base.BaseFragment
 import com.example.myapplication.utils.hide
 import com.example.myapplication.utils.show
 import com.example.myapplication.utils.toast
@@ -66,9 +67,9 @@ class CharactersFragment : BaseFragment<FragmentCharactersBinding>() {
     private fun setNewsListAdapter(result: List<ResultResponse>) = with(binding) {
         val charactersAdapter = CharactersAdapter(result)
 
-//        charactersAdapter.onItemClick = {
-//            findNavController().navigate(CharactersFragmentDirections.actionCharactersfragmentToDetailsfragment(it))
-//        }
+        charactersAdapter.onItemClick = {
+            findNavController().navigate(CharactersFragmentDirections.actionCharactersfragmentToDetailsfragment(id))
+        }
         rvCharacters.adapter = charactersAdapter
     }
 }
